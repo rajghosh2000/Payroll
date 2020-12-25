@@ -17,55 +17,77 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="partials/css/style.css">
 
     <title>UnivOpr</title>
 </head>
 
 <style>
-body {
-    position: relative;
-    /* we need this for the scrollspy */
-    font-size: 14px;
-}
 
-body::-webkit-scrollbar {
-    width: 0.35rem;
-}
 
-body::-webkit-scrollbar-track {
-    background: rgb(24, 41, 41);
-}
-
-body::-webkit-scrollbar-thumb {
-    background: rgb(191, 230, 84);
-}
 </style>
 
 <body>
     <?php include 'partials/_header.php' ;?>
-    <div class="container-fluid pt-2">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://source.unsplash.com/1600x900/?nature,vacation" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://source.unsplash.com/1600x900/?nature,waterfall" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://source.unsplash.com/1600x900/?nature,sky" class="d-block w-100" alt="...">
-                </div>
+    <!--
+    ####################################################
+    C A R O U S E L
+    ####################################################
+    -->
+    <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <a href="#">
+                     <picture>
+                      <source srcset="https://source.unsplash.com/2000x1000/?nature,waterfall" media="(min-width: 1400px)">
+                      <source srcset="https://source.unsplash.com/1400x900/?nature,waterfall" media="(min-width: 769px)">
+                       <source srcset="https://source.unsplash.com/800x900/?nature,waterfall" media="(min-width: 577px)">
+                      <img srcset="https://source.unsplash.com/600x900/?nature,waterfall" alt="responsive image" class="d-block img-fluid">
+                    </picture>
+                </a>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a>
+            <!-- /.carousel-item -->
+            <div class="carousel-item">
+                <a href="https://bootstrapcreative.com/">
+                     <picture>
+                      <source srcset="https://source.unsplash.com/2000x1000/?nature,mountains" media="(min-width: 1400px)">
+                      <source srcset="https://source.unsplash.com/1400x900/?nature,mountains" media="(min-width: 769px)">
+                       <source srcset="https://source.unsplash.com/800x900/?nature,mountains" media="(min-width: 577px)">
+                      <img srcset="https://source.unsplash.com/600x900/?nature,mountains" alt="responsive image" class="d-block img-fluid">
+                    </picture>
+
+                </a>
+            </div>
+            <!-- /.carousel-item -->
+            <div class="carousel-item">
+                <a href="https://bootstrapcreative.com/">
+                     <picture>
+                      <source srcset="https://source.unsplash.com/2000x1000/?nature,sky" media="(min-width: 1400px)">
+                      <source srcset="https://source.unsplash.com/1400x900/?nature,sky" media="(min-width: 769px)">
+                       <source srcset="https://source.unsplash.com/800x900/?nature,sky" media="(min-width: 577px)">
+                      <img srcset="https://source.unsplash.com/600x900/?nature,sky" alt="responsive image" class="d-block img-fluid">
+                    </picture>
+                </a>
+            </div>
+            <!-- /.carousel-item -->
         </div>
+        <!-- /.carousel-inner -->
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
+    <!-- /.carousel -->
+<!-- /.container -->
     <?php include 'partials/_footer.php';?>
 
     <!-- Optional JavaScript -->
