@@ -17,11 +17,21 @@
          <a class="nav-link" href="#"></a>
        </li>
      </ul>
-     <form class="form-inline my-2 my-lg-0">
-       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Client SignUp</button>
-       <button class="btn btn-outline-success my-2 my-sm-0 ml-2" type="submit">Client SignIn</button>
-       <button class="btn btn-outline-success my-2 my-sm-0 ml-1" type="submit">Administrator SignIn</button>
-     </form>
+     <div class="md:flex items-center">
+                <div class="flex flex-col md:flex-row md:mx-6">
+                    <a class="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0" href="#">Home</a>
+                    <a class="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0" href="#">Shop</a>
+                    <a class="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0" href="#">Contact</a>
+                    <a class="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0" href="#">About</a>
+                </div>
+            </div>
+       <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#singupModalC">Client SignUp</button>
+       <button class="btn btn-outline-success my-2 my-sm-0 ml-2" type="button" data-toggle="modal" data-target="#signInmodalC">Client SignIn</button>
+       <button class="btn btn-outline-success my-2 my-sm-0 ml-lg-2" type="button" data-toggle="modal" data-target="#signInmodalA">Administrator SignIn</button>
    </div>
  </nav>';
+
+ include 'partials/_signInmodalClient.php';
+ include 'partials/_signUpmodalClient.php';
+ include 'partials/_signInmodalAdmin.php';
 ?>

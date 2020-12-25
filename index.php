@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
+    <link rel="icon" href="img/Logo-Payroll.png">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -46,31 +47,31 @@
                      <picture>
                       <source srcset="https://source.unsplash.com/2000x1000/?nature,waterfall" media="(min-width: 1400px)">
                       <source srcset="https://source.unsplash.com/1400x900/?nature,waterfall" media="(min-width: 769px)">
-                       <source srcset="https://source.unsplash.com/800x900/?nature,waterfall" media="(min-width: 577px)">
-                      <img srcset="https://source.unsplash.com/600x900/?nature,waterfall" alt="responsive image" class="d-block img-fluid">
+                       <source srcset="https://source.unsplash.com/800x1000/?nature,waterfall" media="(min-width: 577px)">
+                      <img srcset="https://source.unsplash.com/600x1000/?nature,waterfall" alt="responsive image" class="d-block img-fluid">
                     </picture>
                 </a>
             </div>
             <!-- /.carousel-item -->
             <div class="carousel-item">
-                <a href="https://bootstrapcreative.com/">
+                <a href="#">
                      <picture>
                       <source srcset="https://source.unsplash.com/2000x1000/?nature,mountains" media="(min-width: 1400px)">
                       <source srcset="https://source.unsplash.com/1400x900/?nature,mountains" media="(min-width: 769px)">
-                       <source srcset="https://source.unsplash.com/800x900/?nature,mountains" media="(min-width: 577px)">
-                      <img srcset="https://source.unsplash.com/600x900/?nature,mountains" alt="responsive image" class="d-block img-fluid">
+                       <source srcset="https://source.unsplash.com/800x1000/?nature,mountains" media="(min-width: 577px)">
+                      <img srcset="https://source.unsplash.com/600x1000/?nature,mountains" alt="responsive image" class="d-block img-fluid">
                     </picture>
 
                 </a>
             </div>
             <!-- /.carousel-item -->
             <div class="carousel-item">
-                <a href="https://bootstrapcreative.com/">
+                <a href="#">
                      <picture>
-                      <source srcset="https://source.unsplash.com/2000x1000/?nature,sky" media="(min-width: 1400px)">
-                      <source srcset="https://source.unsplash.com/1400x900/?nature,sky" media="(min-width: 769px)">
-                       <source srcset="https://source.unsplash.com/800x900/?nature,sky" media="(min-width: 577px)">
-                      <img srcset="https://source.unsplash.com/600x900/?nature,sky" alt="responsive image" class="d-block img-fluid">
+                      <source srcset="https://source.unsplash.com/2000x1000/?technology,apple" media="(min-width: 1400px)">
+                      <source srcset="https://source.unsplash.com/1400x900/?technology,apple" media="(min-width: 769px)">
+                       <source srcset="https://source.unsplash.com/800x1000/?technology,apple" media="(min-width: 577px)">
+                      <img srcset="https://source.unsplash.com/600x1000/?technology,apple" alt="responsive image" class="d-block img-fluid">
                     </picture>
                 </a>
             </div>
