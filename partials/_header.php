@@ -1,4 +1,7 @@
 <?php
+
+  session_start();
+
    echo '<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
    <a class="navbar-brand" href="#">
         <img src = "img/Logo-Payroll.png" width="100" height="75" class="d-inline-block align-top" alt="" loading="lazy">
@@ -24,12 +27,26 @@
                     <a class="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0" href="#">Contact</a>
                     <a class="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0" href="#">About</a>
                 </div>
-            </div>
-       <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#singupModalC">Client SignUp</button>
-       <button class="btn btn-outline-success my-2 my-sm-0 ml-2" type="button" data-toggle="modal" data-target="#signInmodalC">Client SignIn</button>
-       <button class="btn btn-outline-success my-2 my-sm-0 ml-lg-2" type="button" data-toggle="modal" data-target="#signInmodalA">Administrator SignIn</button>
-   </div>
- </nav>';
+     </div>';
+
+     if(isset($_SESSION['signedIn']) && $_SESSION['signedIn']==true)
+      {   
+        echo '<a href ="partials/_logout.php" type="button" class="btn btn-outline-success ml-2" >Logout</a>';
+        if(strcmp($_SESSION['usr'],'admin')==0)
+        {
+          echo '<a href ="#" type="button" class="btn btn-outline-success ml-2" >Admin Page</a>'; 
+        }
+
+      }
+    else 
+    {
+        echo '
+        <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#singupModalC">Client SignUp</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 ml-2" type="button" data-toggle="modal" data-target="#signInmodalC">Client SignIn</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 ml-lg-2" type="button" data-toggle="modal" data-target="#signInmodalA">Administrator SignIn</button>';
+    }
+    echo'    </div>
+      </nav>';
 
  include 'partials/_signInmodalClient.php';
  include 'partials/_signUpmodalClient.php';

@@ -8,6 +8,7 @@
         {
             session_start();
             $_SESSION['signedIn'] = true;
+            $_SESSION['usr'] = "admin";
             header("Location: /Payroll/admin.php");
         }
         else
