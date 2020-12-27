@@ -9,7 +9,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="/Forum-Web/partials/_handleSingUp.php" method="post">
+            <form action="/Payroll/partials/_validateClient.php" method="post">
                 <div class="modal-body">
                     <div
                         class="lg:w-6/6 md:w-2/2 bg-gray-800 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">

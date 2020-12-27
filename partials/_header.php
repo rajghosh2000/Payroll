@@ -3,7 +3,7 @@
   session_start();
 
    echo '<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-   <a class="navbar-brand" href="#">
+   <a class="navbar-brand" href="/Payroll/index.php">
         <img src = "img/Logo-Payroll.png" width="100" height="75" class="d-inline-block align-top" alt="" loading="lazy">
        
    </a>
@@ -14,7 +14,7 @@
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item active">
-         <a class="nav-link" href="#"> Pay System for University Operations <span class="sr-only">(current)</span></a>
+         <a class="nav-link" href="/Payroll/index.php"> Pay System for University Operations <span class="sr-only">(current)</span></a>
        </li>
        <li class="nav-item">
          <a class="nav-link" href="#"></a>
@@ -61,6 +61,16 @@
     if(isset($_GET['addUser']) && $_GET['addUser']=="true")
     {
         echo '<script>alert("User added");</script>';
+    }
+
+    if(isset($_GET['err']) && $_GET['err']=="true")
+    {
+        echo '<script>alert("Employee ID doesnot exists!!! Please try again");</script>';
+    }
+
+    if(isset($_GET['userId']) && $_GET['userId']=="true")
+    {
+        echo '<script>alert("User Details added !!! You can Sign In Now");</script>';
     }
 
 ?>
