@@ -31,12 +31,14 @@
 
      if(isset($_SESSION['signedIn']) && $_SESSION['signedIn']==true)
       {   
-        echo '<a href ="partials/_logout.php" type="button" class="btn btn-outline-success ml-2" >Logout</a>';
         if(strcmp($_SESSION['usr'],'admin')==0)
         {
-          echo '<a href ="#" type="button" class="btn btn-outline-success ml-2" >Admin Page</a>'; 
+          echo '
+          <p class="my-1 text-sm text-white font-medium hover:text-indigo-500 md:mx-4 md:my-0"> Welcome, Admin</p>
+          <a href ="/Payroll/admin.php" type="button" class="btn btn-outline-success ml-2" >Admin Page</a>
+          '; 
         }
-
+        echo '<a href ="partials/_logout.php" type="button" class="btn btn-outline-success ml-2" >Logout</a>';
       }
     else 
     {
@@ -44,11 +46,21 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#singupModalC">Client SignUp</button>
         <button class="btn btn-outline-success my-2 my-sm-0 ml-2" type="button" data-toggle="modal" data-target="#signInmodalC">Client SignIn</button>
         <button class="btn btn-outline-success my-2 my-sm-0 ml-lg-2" type="button" data-toggle="modal" data-target="#signInmodalA">Administrator SignIn</button>';
+
+        
     }
     echo'    </div>
       </nav>';
 
+
  include 'partials/_signInmodalClient.php';
  include 'partials/_signUpmodalClient.php';
  include 'partials/_signInmodalAdmin.php';
+
+
+    if(isset($_GET['addUser']) && $_GET['addUser']=="true")
+    {
+        echo '<script>alert("User added");</script>';
+    }
+
 ?>

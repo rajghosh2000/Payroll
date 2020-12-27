@@ -20,7 +20,7 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="partials/css/style.css">
 
-    <title>UnivOpr</title>
+    <title>PayRoll</title>
 </head>
 
 <style>
@@ -45,10 +45,10 @@
             <div class="carousel-item active">
                 <a href="#">
                      <picture>
-                      <source srcset="https://source.unsplash.com/2000x1000/?nature,waterfall" media="(min-width: 1400px)">
-                      <source srcset="https://source.unsplash.com/1400x900/?nature,waterfall" media="(min-width: 769px)">
-                       <source srcset="https://source.unsplash.com/800x1000/?nature,waterfall" media="(min-width: 577px)">
-                      <img srcset="https://source.unsplash.com/600x1000/?nature,waterfall" alt="responsive image" class="d-block img-fluid">
+                      <source srcset="https://source.unsplash.com/2000x1000/?technology,mobile" media="(min-width: 1400px)">
+                      <source srcset="https://source.unsplash.com/1400x900/?technology,mobile" media="(min-width: 769px)">
+                       <source srcset="https://source.unsplash.com/800x1000/?technology,mobile" media="(min-width: 577px)">
+                      <img srcset="https://source.unsplash.com/600x1000/?technology,mobile" alt="responsive image" class="d-block img-fluid">
                     </picture>
                 </a>
             </div>
@@ -56,10 +56,10 @@
             <div class="carousel-item">
                 <a href="#">
                      <picture>
-                      <source srcset="https://source.unsplash.com/2000x1000/?nature,mountains" media="(min-width: 1400px)">
-                      <source srcset="https://source.unsplash.com/1400x900/?nature,mountains" media="(min-width: 769px)">
-                       <source srcset="https://source.unsplash.com/800x1000/?nature,mountains" media="(min-width: 577px)">
-                      <img srcset="https://source.unsplash.com/600x1000/?nature,mountains" alt="responsive image" class="d-block img-fluid">
+                      <source srcset="https://source.unsplash.com/2000x1000/?environment,river" media="(min-width: 1400px)">
+                      <source srcset="https://source.unsplash.com/1400x900/?environment,river" media="(min-width: 769px)">
+                       <source srcset="https://source.unsplash.com/800x1000/?environment,river" media="(min-width: 577px)">
+                      <img srcset="https://source.unsplash.com/600x1000/?environment,river" alt="responsive image" class="d-block img-fluid">
                     </picture>
 
                 </a>
@@ -68,10 +68,10 @@
             <div class="carousel-item">
                 <a href="#">
                      <picture>
-                      <source srcset="https://source.unsplash.com/2000x1000/?technology,apple" media="(min-width: 1400px)">
-                      <source srcset="https://source.unsplash.com/1400x900/?technology,apple" media="(min-width: 769px)">
-                       <source srcset="https://source.unsplash.com/800x1000/?technology,apple" media="(min-width: 577px)">
-                      <img srcset="https://source.unsplash.com/600x1000/?technology,apple" alt="responsive image" class="d-block img-fluid">
+                      <source srcset="https://source.unsplash.com/2000x1000/?lanscape,mountains" media="(min-width: 1400px)">
+                      <source srcset="https://source.unsplash.com/1400x900/?lanscape,mountains" media="(min-width: 769px)">
+                       <source srcset="https://source.unsplash.com/800x1000/?lanscape,mountains" media="(min-width: 577px)">
+                      <img srcset="https://source.unsplash.com/600x1000/?lanscape,mountains" alt="responsive image" class="d-block img-fluid">
                     </picture>
                 </a>
             </div>
