@@ -22,10 +22,9 @@
      </ul>
      <div class="md:flex items-center">
                 <div class="flex flex-col md:flex-row md:mx-6">
-                    <a class="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0" href="#">Home</a>
-                    <a class="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0" href="#">Shop</a>
-                    <a class="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0" href="#">Contact</a>
-                    <a class="my-1 text-sm text-gray-700 font-medium hover:text-indigo-500 md:mx-4 md:my-0" href="#">About</a>
+                    <a style="text-decoration:none" class="my-1 text-sm text-gray-500 font-medium hover:text-green-500 md:mx-4 md:my-0" href="/Payroll/index.php">Home</a>
+                    <a style="text-decoration:none" class="my-1 text-sm text-gray-500 font-medium hover:text-green-500 md:mx-4 md:my-0" href="#">Contact</a>
+                    <a style="text-decoration:none" class="my-1 text-sm text-gray-500 font-medium hover:text-green-500 md:mx-4 md:my-0" href="#">About</a>
                 </div>
      </div>';
 
@@ -36,6 +35,12 @@
           echo '
           <p class="my-1 text-sm text-white font-medium hover:text-indigo-500 md:mx-4 md:my-0"> Welcome, Admin</p>
           <a href ="/Payroll/admin.php" type="button" class="btn btn-outline-success ml-2" >Admin Page</a>
+          '; 
+        }
+        elseif(strcmp($_SESSION['usr'],'client')==0)
+        {
+          echo'<p class="my-1 text-sm text-white font-medium hover:text-indigo-500 md:mx-4 md:my-0"> Welcome,'.$_SESSION['uid'].'</p>
+          <a href ="/Payroll/clientPaySlip.php" type="button" class="btn btn-outline-success ml-2" >Client Page</a>
           '; 
         }
         echo '<a href ="partials/_logout.php" type="button" class="btn btn-outline-success ml-2" >Logout</a>';
