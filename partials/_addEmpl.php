@@ -8,6 +8,7 @@
         $epos = $_POST['e_pos'];
         $edob = $_POST['dob'];
         $edoj = date("Y-m-d");
+        $bp = 0;
 
         $sql_exists = "SELECT * FROM `employee` WHERE emp_id = '$eid'";
         $res_exists = mysqli_query($con,$sql_exists);
@@ -49,9 +50,45 @@
 
                 if($res)
                 {
-                    $showAlert = true;
-                    header("Location: /Payroll/admin.php?addUser=true");
-                    exit();
+                    $jsondata = file_get_contents("json/pay.json");
+                    $json = json_decode($jsondata,true);
+                    $i=0;
+                    while($i<5)
+                    {
+                        if(strcmp(($json['basicPay'][$i]['title']),$epos)==0)
+                        {
+                            $bp = (double)($json['basicPay'][$i]['bp']);
+                            break;
+                        }
+                        $i++;
+                    }
+                    $itax = 2200; //Income tax
+                    $lic = 600;  // LIC Amt
+                    $gpf = 1000; // GPF amt
+                    $lamt = 0;  // Any loan if taken
+                    $misc = 0;  // Extra amt or commission;
+
+                    // 5 % ---- TA charges 
+                    // 5 % ---- CCA charges
+                    // 32 % ---- HRA charges
+                    // 16 % ---- DA charges
+
+                    $gross = ($bp) + (2 * 0.05 * $bp) + (0.32 * $bp) + (0.16 * $bp) + ($misc);
+
+                    $net = ($gross) - ($itax + $lic + $gpf + $lamt);
+                    
+                    $sql_pay = "INSERT INTO `payinfo`(`emp_id`, `basicpay`, `income_tax`, `loan_amt`, `gpf`, `misc`, `lic`, `gross_pay`, `net_pay`) VALUES ('$eid','$bp','$itax','$lamt','$gpf','$misc','$lic','$gross','$net')";
+                    $res_pay = mysqli_query($con,$sql_pay);
+                    if($res_pay)
+                    {
+                        $showAlert = true;
+                        header("Location: /Payroll/admin.php?addUser=true");
+                        exit();
+                    }
+                    else
+                    {
+                        $showErr = "Pay not Added!!";
+                    }
                 }
                 else
                 {

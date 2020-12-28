@@ -1,0 +1,24 @@
+{
+    "basicPay":[
+        {
+            "title" : "Assistant Director",
+            "bp" : "150000"
+        },
+        {
+            "title" : "Senior Supervisor",
+            "bp" : "90000"
+        },
+        {
+            "title" : "Junior Supervisor",
+            "bp" : "80000"
+        },
+        {
+            "title" : "General Officer",
+            "bp" : "50000"
+        },
+        {
+            "title" : "Clerk",
+            "bp" : "35000"
+        }
+    ]
+}
