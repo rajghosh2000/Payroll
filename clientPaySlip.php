@@ -33,8 +33,161 @@
         include 'partials/_header.php' ;
         include 'partials/_dbconnect.php';
     
+        $eid = $_SESSION['uid'];
+        $sql = "SELECT * FROM employee RIGHT JOIN payinfo ON employee.emp_id = payinfo.emp_id WHERE employee.emp_id = 'MAG1001'";
+        $res = mysqli_query($con,$sql);
+    
+        // <!-- Use a for loop to iterate through the row -->
 
+        while($row = mysqli_fetch_assoc($res))
+        {
+            $ename = $row['emp_name'];
+            $epos = $row['emp_position'];
+            $egr = $row['emp_grade'];
+            $dob = $row['dob'];
+            $doj = $row['date_of_joining'];
+            $dor = $row['date_of_retirement'];
+            $bp  = $row['basicpay'];
+            $itax = $row['income_tax'];
+            $lamt = $row['loan_amt'];
+            $gpf = $row['gpf'];
+            $misc = $row['misc'];
+            $lic = $row['lic'];
+            $gross = $row['gross_pay'];
+            $net = $row['net_pay'];
+        }
 
+        echo'
+            <section class="text-gray-600 body-font overflow-hidden">
+                <div class="container px-5 py-24 mx-auto my-5">
+                    <div class="lg:w-4/5 mx-auto flex flex-wrap">
+                    <div class="w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                        <h2 class="text-sm title-font text-gray-500 tracking-widest">Welcome, '.$eid.'</h2>
+                        <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">'.$ename.'</h1>
+                        <div class="flex mb-4">
+                            <span class="flex items-center">
+                                
+                            </span>
+                            <span class="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
+                            
+                            </span>
+                        </div>
+                        <div class="flex items-start justify-start pb-3 md:py-0 md:w-1/2">
+                            <form>
+                                <div class="flex flex-col rounded-lg border dark:border-gray-600 overflow-hidden lg:flex-row">
+                                    <button class="py-3 px-4 lg:w-56 bg-gray-700 text-gray-100 text-sm font-medium tracking-wider uppercase hover:bg-gray-700 focus:bg-gray-600 focus:outline-none" disabled>Position</button>
+
+                                    <input class="py-3 px-6 bg-white font-extrabold dark:bg-gray-800 text-dark outline-none placeholder-gray-500 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent" type="text" readonly placeholder="" value="'.$epos.'" aria-label="Enter your email">
+                                    
+                                </div>
+                            </form>
+                        </div>
+                        <div class="flex items-start justify-start pb-3 md:py-0 md:w-1/2">
+                            <form>
+                                <div class="flex flex-col rounded-lg border dark:border-gray-600 overflow-hidden lg:flex-row">
+                                    <button class="py-3 px-4 lg:w-56 bg-gray-700 text-gray-100 text-sm font-medium tracking-wider uppercase hover:bg-gray-700 focus:bg-gray-600 focus:outline-none" disabled>Grade</button>
+
+                                    <input class="py-3 px-6  bg-white font-extrabold dark:bg-gray-800 text-dark outline-none placeholder-gray-500 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent" type="text" readonly placeholder="" value="'.$egr.'" aria-label="Enter your email">
+                                    
+                                </div>
+                            </form>
+                        </div>
+                        <div class="flex items-start justify-start pb-3 md:py-0 md:w-1/2">
+                            <form>
+                                <div class="flex flex-col  rounded-lg border dark:border-gray-600 overflow-hidden lg:flex-row">
+                                    <button class="py-3 px-4 lg:w-56 bg-gray-700 text-gray-100 text-sm font-medium tracking-wider uppercase hover:bg-gray-700 focus:bg-gray-600 focus:outline-none" disabled>Date of Birth</button>
+
+                                    <input class="py-3 px-6 bg-white font-extrabold dark:bg-gray-800 text-dark outline-none placeholder-gray-500 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent" type="text" readonly placeholder="" value="'.$dob.'" aria-label="Enter your email">
+                                    
+                                </div>
+                            </form>
+                        </div>
+                        <div class="flex items-start justify-start pb-3 md:py-0 md:w-1/2">
+                            <form>
+                                <div class="flex flex-col rounded-lg border dark:border-gray-600 overflow-hidden lg:flex-row">
+                                    <button class="py-3 px-4 bg-gray-700 lg:w-56 text-gray-100 text-sm font-medium tracking-wider uppercase hover:bg-gray-700 focus:bg-gray-600 focus:outline-none" disabled>Date of Retirement</button>
+
+                                    <input class="py-3 px-6 bg-white font-extrabold dark:bg-gray-800 text-dark outline-none placeholder-gray-500 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent" type="text" readonly placeholder="" value="'.$dor.'" aria-label="Enter your email">
+                                    
+                                </div>
+                            </form>
+                        </div>
+                        <div class="flex items-start justify-start pb-3 md:py-0 md:w-1/2">
+                            <form>
+                                <div class="flex flex-col rounded-lg border dark:border-gray-600 overflow-hidden lg:flex-row">
+                                    <button class="py-3 px-4 bg-gray-700 lg:w-56 text-gray-100 text-sm font-medium tracking-wider uppercase hover:bg-gray-700 focus:bg-gray-600 focus:outline-none" disabled>Date of Joining</button>
+
+                                    <input class="py-3 px-6 bg-white font-extrabold dark:bg-gray-800 text-dark outline-none placeholder-gray-500 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent" type="text" readonly placeholder="" value="'.$doj.'" aria-label="Enter your email">
+                                    
+                                </div>
+                            </form>
+                        </div>
+                        <div class="flex items-start justify-start pb-3 md:py-0 md:w-1/2">
+                            <form>
+                                <div class="flex flex-col rounded-lg border dark:border-gray-600 overflow-hidden lg:flex-row">
+                                    <button class="py-3 px-4 bg-gray-700 lg:w-56 text-gray-100 text-sm font-medium tracking-wider uppercase hover:bg-gray-700 focus:bg-gray-600 focus:outline-none" disabled>Basic Pay</button>
+
+                                    <input class="py-3 px-6 bg-white font-extrabold dark:bg-gray-800 text-dark outline-none placeholder-gray-500 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent" type="text" readonly placeholder="" value="₹ '.$bp.'" aria-label="Enter your email">
+                                    
+                                </div>
+                            </form>
+                        </div>
+                       
+                        
+                        <hr>
+                        <div class="container px-5 mx-auto lg:mx-2">
+                            <div class="w-full mx-auto overflow-auto">
+                            <table class="table-auto w-full text-left whitespace-no-wrap">
+                                <thead>
+                                <tr>
+                                    <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">Employee ID</th>
+                                    <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Income Tax Amoount</th>
+                                    <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">GPF</th>
+                                    <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">LIC</th>
+                                    <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Loan Amount</th>
+                                    <th class="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">Miscellaneous</th>
+                                    <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="px-4 py-3">₹ '.$eid.'</td>
+                                    <td class="px-4 py-3">₹ '.$itax.'</td>
+                                    <td class="px-4 py-3">₹ '.$gpf.'</td>
+                                    <td class="px-4 py-3">₹ '.$lic.'</td>
+                                    <td class="px-4 py-3">₹ '.$lamt.'</td>
+                                    <td class="px-4 py-3">₹ '.$misc.'</td>
+                                    <td class="w-10 text-center">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr>
+                        <div class="flex items-start justify-start pb-3 md:py-0 md:w-1/2">
+                            <form>
+                                <div class="flex flex-col rounded-lg border dark:border-gray-600 overflow-hidden lg:flex-row">
+                                    <button class="py-3 px-4 bg-gray-700 lg:w-56 text-gray-100 text-sm font-medium tracking-wider uppercase hover:bg-gray-700 focus:bg-gray-600 focus:outline-none" disabled>Gross Pay</button>
+
+                                    <input class="py-3 px-6 bg-white font-extrabold dark:bg-gray-800 text-dark outline-none placeholder-gray-500 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent" type="text" readonly placeholder="" value="₹ '.$gross.'" aria-label="Enter your email">
+                                    
+                                </div>
+                            </form>
+                        </div>
+                        <div class="flex items-start justify-start pb-3 md:py-0 md:w-1/2">
+                            <form>
+                                <div class="flex flex-col rounded-lg border dark:border-gray-600 overflow-hidden lg:flex-row">
+                                    <button class="py-3 px-4 bg-gray-700 lg:w-56 text-gray-100 text-sm font-medium tracking-wider uppercase hover:bg-gray-700 focus:bg-gray-600 focus:outline-none" disabled>Net Pay</button>
+
+                                    <input class="py-3 px-6 bg-white font-extrabold dark:bg-gray-800 text-dark outline-none placeholder-gray-500 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent" type="text" readonly placeholder="" value="₹ '.$net.'" aria-label="Enter your email">
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>';
 
 
 
