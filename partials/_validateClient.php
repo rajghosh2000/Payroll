@@ -11,9 +11,20 @@
 
         if($numrows==1)
         {
-            $showAlert = true;
-            header("Location: /Payroll/clientSignUp.php");
-            exit();
+            $sql_check = "SELECT * FROM `emp_userinfo` WHERE emp_id = '$eidv'";
+            $resu = mysqli_query($con,$sql_check);
+            $numrows2 = mysqli_num_rows($resu);
+            
+            if($numrows2==1)
+            {
+                $showError = "Exists";
+            }
+            else
+            {
+                $showAlert = true;
+                header("Location: /Payroll/clientSignUp.php");
+                exit();
+            }
         }
         else
         {

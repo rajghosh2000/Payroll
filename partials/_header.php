@@ -39,7 +39,7 @@
         }
         elseif(strcmp($_SESSION['usr'],'client')==0)
         {
-          echo'<p class="my-1 text-sm text-white font-medium hover:text-indigo-500 md:mx-4 md:my-0"> Welcome,'.$_SESSION['uid'].'</p>
+          echo'<p class="my-1 text-sm text-white font-medium hover:text-indigo-500 md:mx-4 md:my-0"> Welcome, '.$_SESSION['uid'].'</p>
           <a href ="/Payroll/clientPaySlip.php" type="button" class="btn btn-outline-success ml-2" >Client Page</a>
           '; 
         }
@@ -71,6 +71,11 @@
     if(isset($_GET['err']) && $_GET['err']=="true")
     {
         echo '<script>alert("Employee ID doesnot exists!!! Please try again");</script>';
+    }
+
+    if(isset($_GET['err']) && $_GET['err']=="Exists")
+    {
+        echo '<script>alert("Employee Account already exists!!! Please Login");</script>';
     }
 
     if(isset($_GET['userId']) && $_GET['userId']=="true")
