@@ -34,7 +34,7 @@
         include 'partials/_dbconnect.php';
     
         $eid = $_SESSION['uid'];
-        $sql = "SELECT * FROM employee RIGHT JOIN payinfo ON employee.emp_id = payinfo.emp_id WHERE employee.emp_id = 'MAG1001'";
+        $sql = "SELECT * FROM employee RIGHT JOIN payinfo ON employee.emp_id = payinfo.emp_id WHERE employee.emp_id = '$eid'";
         $res = mysqli_query($con,$sql);
     
         // <!-- Use a for loop to iterate through the row -->
@@ -151,7 +151,7 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td class="px-4 py-3">₹ '.$eid.'</td>
+                                    <td class="px-4 py-3">'.$eid.'</td>
                                     <td class="px-4 py-3">₹ '.$itax.'</td>
                                     <td class="px-4 py-3">₹ '.$gpf.'</td>
                                     <td class="px-4 py-3">₹ '.$lic.'</td>
