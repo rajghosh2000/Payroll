@@ -32,6 +32,7 @@
     
     <body>';
     include 'partials/_header.php';
+    include 'partials/_dbconnect.php';
 
 
     echo'
@@ -53,16 +54,38 @@
                         <th class="w-10 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tr rounded-br"></th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td class="px-4 py-3">Start</td>
-                        <td class="px-4 py-3">AAAAAAAAA</td>
-                        <td class="px-4 py-3">15 GB</td>
-                        <td class="px-4 py-3 text-lg text-gray-900">Free</td>
-                        <td class="w-10 text-center">
-                        </td>
-                    </tr>
+                    <tbody>';
+
+
+                    $sql_retire = "SELECT * FROM `employee` WHERE date_of_retirement <= ADDDATE(CURRENT_DATE, 31) AND date_of_retirement >= CURRENT_DATE";
+                    $res_retire = mysqli_query($con,$sql_retire);
+    
+                    // <!-- Use a for loop to iterate through the row -->
+            
+                    while($row = mysqli_fetch_assoc($res_retire))
+                    {
+                        $eid = $row['emp_id'];
+                        $ename = $row['emp_name'];
+                        $dob = $row['dob'];
+                        $doj = $row['date_of_joining'];
+                        $dor = $row['date_of_retirement'];
+
+                        echo'
+                            <tr>
+                                <td class="px-4 py-3">'.$eid.'</td>
+                                <td class="px-4 py-3">'.$ename.'</td>
+                                <td class="px-4 py-3">'.$dob.'</td>
+                                <td class="px-4 py-3">'.$doj.'</td>
+                                <td class="px-4 py-3">'.$dor.'</td>
+                                <td class="w-10 text-center">
+                                </td>
+                            </tr>
+                        ';
+                    }
+
+            echo'        
                     </tbody>
+                    
                 </table>
                 </div>
                 <hr>

@@ -26,6 +26,6 @@
                     $err="Details not added!!";
                 }
         }
-        header("Location: /Payroll/index.php?err=$err"); 
+        header("Location: /Payroll/index.php?errCL=$err"); 
     }
 ?>                

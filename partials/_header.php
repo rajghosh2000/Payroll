@@ -82,5 +82,13 @@
     {
         echo '<script>alert("User Details added !!! You can Sign In Now");</script>';
     }
+    if(isset($_GET['errLogin'])&& $_GET['errLogin']=="true")
+    {
+      echo '<script>alert("Login Error Check Credentials");</script>';
+    }
+    if(isset($_GET['errCL'])&& $_GET['errCL']=="false")
+    {
+      echo '<script>alert("Pasword didnot match");</script>';
+    }
 
 ?>

@@ -23,10 +23,9 @@
                         header("Location: /Payroll/clientPaySlip.php");
                         exit(); 
                 }
-                else{
+            else{
                     echo "Unable to log in ";
                 }
-                header("Location: /Payroll/clientPaySlip.php");
         }
         header("Location: /Payroll/index.php?errLogin=true");
     }
