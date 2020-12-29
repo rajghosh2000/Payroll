@@ -1,7 +1,7 @@
 <?php
 //Connecting to database
 
-        $servername = "13.59.34.107";
+        $servername = "localhost";
         $username = "root";
         $password = "sa";
         $database = "payroll";
