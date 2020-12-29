@@ -57,7 +57,8 @@
                     {
                         if(strcmp(($json['basicPay'][$i]['title']),$epos)==0)
                         {
-                            $bp = (double)($json['basicPay'][$i]['bp']);
+                            $bpay = $json['basicPay'][$i]['bp'];
+                            $bp = (double)($bpay);
                             break;
                         }
                         $i++;
