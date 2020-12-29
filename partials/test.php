@@ -6,7 +6,7 @@
                     {
                         if(strcmp(($json['basicPay'][$i]['title']),'Clerk')==0)
                         {
-                            echo '$json['basicPay'][$i]['bp'])';
+                            echo $json['basicPay'][$i]['bp']);
                             break;
                         }
                         $i++;
