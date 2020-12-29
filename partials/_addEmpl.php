@@ -78,7 +78,7 @@
 
                     $net = ($gross) - ($itax + $lic + $gpf + $lamt);
                     
-                    $sql_pay = "INSERT INTO `payinfo`(`emp_id`, `basicpay`, `income_tax`, `loan_amt`, `gpf`, `misc`, `lic`, `gross_pay`, `net_pay`) VALUES ('$eid','$bp','$itax','$lamt','$gpf','$misc','$lic','$gross','$net')";
+                    $sql_pay = "INSERT INTO `payinfo`(`emp_id`, `basicpay`, `income_tax`, `loan_amt`, `gpf`, `misc`, `lic`, `gross_pay`, `net_play`) VALUES ('$eid','$bp','$itax','$lamt','$gpf','$misc','$lic','$gross','$net')";
                     $res_pay = mysqli_query($con,$sql_pay);
                     if($res_pay)
                     {
