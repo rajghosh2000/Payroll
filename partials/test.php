@@ -1,5 +1,5 @@
 <?php
-                    $jsondata = file_get_contents("/Payroll/partials/json/pay.json");
+                    $jsondata = file_get_contents("json/pay.json");
                     $json = json_decode($jsondata,true);
                     $i=0;
                     while($i<5)
