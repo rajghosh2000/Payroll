@@ -45,7 +45,7 @@
             <div class="carousel-item active">
                 <a href="#">
                      <picture>
-                      <source srcset="/Payroll/img/1_2000.jpeg" media="(min-width: 1400px)">
+                      <source srcset="/img/1_2000.jpeg" media="(min-width: 1400px)">
                       <source srcset="https://source.unsplash.com/1400x900/?technology,mobile" media="(min-width: 769px)">
                        <source srcset="https://source.unsplash.com/800x1000/?technology,mobile" media="(min-width: 577px)">
                       <img srcset="https://source.unsplash.com/600x1000/?technology,mobile" alt="responsive image" class="d-block img-fluid">
@@ -56,7 +56,7 @@
             <div class="carousel-item">
                 <a href="#">
                      <picture>
-                      <source srcset="/Payroll/img/2_2000.jpeg" media="(min-width: 1400px)">
+                      <source srcset="/img/2_2000.jpeg" media="(min-width: 1400px)">
                       <source srcset="https://source.unsplash.com/1400x900/?nature,waterfall" media="(min-width: 769px)">
                        <source srcset="https://source.unsplash.com/800x1000/?nature,waterfall" media="(min-width: 577px)">
                       <img srcset="https://source.unsplash.com/600x1000/?nature,waterfall" alt="responsive image" class="d-block img-fluid">
@@ -68,7 +68,7 @@
             <div class="carousel-item">
                 <a href="#">
                      <picture>
-                      <source srcset="/Payroll/img/3_2000.jpeg" media="(min-width: 1400px)">
+                      <source srcset="/img/3_2000.jpeg" media="(min-width: 1400px)">
                       <source srcset="https://source.unsplash.com/1400x900/?lanscape,mountains" media="(min-width: 769px)">
                        <source srcset="https://source.unsplash.com/800x1000/?lanscape,mountains" media="(min-width: 577px)">
                       <img srcset="https://source.unsplash.com/600x1000/?lanscape,mountains" alt="responsive image" class="d-block img-fluid">
