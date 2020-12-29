@@ -22,7 +22,7 @@
             else
             {
                 $showAlert = true;
-                header("Location: /Payroll/clientSignUp.php");
+                header("Location: /clientSignUp.php");
                 exit();
             }
         }

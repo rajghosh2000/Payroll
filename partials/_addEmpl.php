@@ -82,7 +82,7 @@
                     if($res_pay)
                     {
                         $showAlert = true;
-                        header("Location: /Payroll/admin.php?addUser=true");
+                        header("Location: /admin.php?addUser=true");
                         exit();
                     }
                     else
@@ -95,6 +95,6 @@
                     $showErr="Details not added!!";
                 }
         }
-        header("Location: /Payroll/admin.php?err=$showErr"); 
+        header("Location: /admin.php?err=$showErr"); 
     }
 ?>

@@ -20,7 +20,7 @@
                         $_SESSION['signedIn'] = true;
                         $_SESSION['usr'] = "client";
                         $_SESSION['uid'] = $uid; 
-                        header("Location: /Payroll/clientPaySlip.php");
+                        header("Location: /clientPaySlip.php");
                         exit(); 
                 }
             else{
