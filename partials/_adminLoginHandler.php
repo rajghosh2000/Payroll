@@ -9,7 +9,7 @@
             session_start();
             $_SESSION['signedIn'] = true;
             $_SESSION['usr'] = "admin";
-            header("Location: Location: /Payroll/index.php");
+            header("Location: /Payroll/index.php");
         }
         else
         {
