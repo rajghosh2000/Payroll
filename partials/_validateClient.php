@@ -30,6 +30,6 @@
         {
             $showError = "true";
         }
-        header("Location: /Payroll/index.php?err=$showError"); 
+        header("Location: /index.php?err=$showError"); 
     }
 ?>

@@ -3,5 +3,5 @@
     echo 'Logging You Out Please Wait';
     
     session_destroy();
-    header("Location: /Payroll");
+    header("Location: /index.php");
 ?>

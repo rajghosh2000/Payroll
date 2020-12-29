@@ -14,7 +14,7 @@
         else
         {
             echo 'Err !!! Check You Credentials';
-            header("Location: /Payroll/index.php");
+            header("Location: /index.php");
         }
     }
 ?>

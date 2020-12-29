@@ -27,6 +27,6 @@
                     echo "Unable to log in ";
                 }
         }
-        header("Location: /Payroll/index.php?errLogin=true");
+        header("Location: /index.php?errLogin=true");
     }
 ?>

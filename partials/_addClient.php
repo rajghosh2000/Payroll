@@ -18,7 +18,7 @@
             if($res)
                 {
                     $showAlert = true;
-                    header("Location: /Payroll/index.php?userId=true");
+                    header("Location: /index.php?userId=true");
                     exit();
                 }
             else
@@ -26,6 +26,6 @@
                     $err="Details not added!!";
                 }
         }
-        header("Location: /Payroll/index.php?errCL=$err"); 
+        header("Location: /index.php?errCL=$err"); 
     }
 ?>                

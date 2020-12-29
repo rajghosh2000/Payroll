@@ -3,7 +3,7 @@
   session_start();
 
    echo '<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-   <a class="navbar-brand" href="/Payroll/index.php">
+   <a class="navbar-brand" href="/index.php">
         <img src = "img/Logo-Payroll.png" width="100" height="75" class="d-inline-block align-top" alt="" loading="lazy">
        
    </a>
@@ -14,7 +14,7 @@
    <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item active">
-         <a class="nav-link" href="/Payroll/index.php"> Pay System for University Operations <span class="sr-only">(current)</span></a>
+         <a class="nav-link" href="/index.php"> Pay System for University Operations <span class="sr-only">(current)</span></a>
        </li>
        <li class="nav-item">
          <a class="nav-link" href="#"></a>
@@ -22,7 +22,7 @@
      </ul>
      <div class="md:flex items-center">
                 <div class="flex flex-col md:flex-row md:mx-6">
-                    <a style="text-decoration:none" class="my-1 text-sm text-gray-500 font-medium hover:text-green-500 md:mx-4 md:my-0" href="/Payroll/index.php">Home</a>
+                    <a style="text-decoration:none" class="my-1 text-sm text-gray-500 font-medium hover:text-green-500 md:mx-4 md:my-0" href="/index.php">Home</a>
                     <a style="text-decoration:none" class="my-1 text-sm text-gray-500 font-medium hover:text-green-500 md:mx-4 md:my-0" href="#">Contact</a>
                     <a style="text-decoration:none" class="my-1 text-sm text-gray-500 font-medium hover:text-green-500 md:mx-4 md:my-0" href="#">About</a>
                 </div>
