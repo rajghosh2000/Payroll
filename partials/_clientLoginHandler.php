@@ -20,13 +20,13 @@
                         $_SESSION['signedIn'] = true;
                         $_SESSION['usr'] = "client";
                         $_SESSION['uid'] = $uid; 
-                        header("Location: /clientPaySlip.php");
+                        header("Location: /Payroll/clientPaySlip.php");
                         exit(); 
                 }
             else{
                     echo "Unable to log in ";
                 }
         }
-        header("Location: /index.php?errLogin=true");
+        header("Location: /Payroll/index.php?errLogin=true");
     }
 ?>

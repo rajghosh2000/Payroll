@@ -9,12 +9,12 @@
             session_start();
             $_SESSION['signedIn'] = true;
             $_SESSION['usr'] = "admin";
-            header("Location: /admin.php");
+            header("Location: Location: /Payroll/index.php");
         }
         else
         {
             echo 'Err !!! Check You Credentials';
-            header("Location: /index.php");
+            header("Location: /Payroll/index.php");
         }
     }
 ?>

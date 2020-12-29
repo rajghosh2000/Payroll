@@ -45,7 +45,7 @@
                 <p class="mt-2 text-center text-sm text-gray-600">
                 </p>
             </div>
-            <form class="mt-8 space-y-6" action="/partials/_addClient.php" method="POST">
+            <form class="mt-8 space-y-6" action="/Payroll/partials/_addClient.php" method="POST">
                 <input type="hidden" name="remember" value="true">
                 <div class="rounded-md shadow-sm -space-y-px">
                 <div>

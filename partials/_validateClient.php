@@ -22,7 +22,7 @@
             else
             {
                 $showAlert = true;
-                header("Location: /clientSignUp.php");
+                header("Location: /Payroll/clientSignUp.php");
                 exit();
             }
         }
@@ -30,6 +30,6 @@
         {
             $showError = "true";
         }
-        header("Location: /index.php?err=$showError"); 
+        header("Location: /Payroll/index.php?err=$showError"); 
     }
 ?>
