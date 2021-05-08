@@ -22,7 +22,7 @@
      </ul>
      <div class="md:flex items-center">
                 <div class="flex flex-col md:flex-row md:mx-6">
-                    <a style="text-decoration:none" class="my-1 text-sm text-gray-500 font-medium hover:text-green-500 md:mx-4 md:my-0" href="/index.php">Home</a>
+                    <a style="text-decoration:none" class="my-1 text-sm text-gray-500 font-medium hover:text-green-500 md:mx-4 md:my-0" href="index.php">Home</a>
                     <a style="text-decoration:none" class="my-1 text-sm text-gray-500 font-medium hover:text-green-500 md:mx-4 md:my-0" href="#">Contact</a>
                     <a style="text-decoration:none" class="my-1 text-sm text-gray-500 font-medium hover:text-green-500 md:mx-4 md:my-0" href="#">About</a>
                 </div>
